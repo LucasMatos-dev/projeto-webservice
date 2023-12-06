@@ -1,0 +1,24 @@
+{
+  "name": "projeto-webservice-saude",
+  "version": "1.0.0",
+  "description": "Projeto de Webservice para Saúde e Bem-estar",
+  "scripts": {
+      "start": "npm-run-all -p start:agendamento start:dieta start:nutricional start:feedback start:analise start:localizacao start:sugestoes start:avaliacao",
+      "start:agendamento": "node server_agendamento_consultas.js",
+      "start:dieta": "node server_monitoramento_dieta.js",
+      "start:nutricional": "node server_informacoes_nutricionais.js",
+      "start:feedback": "node consumidor_feedback_consultas.js",
+      "start:analise": "node consumidor_analise_nutricional.js",
+      "start:localizacao": "node consumidor_localizacao_profissionais.js",
+      "start:sugestoes": "node consumidor_sugestoes_dieta.js",
+      "start:avaliacao": "node server_avaliacoes_medicas.js"
+  },
+  "author": "Seu Nome",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "express": "^4.18.2",
+    "npm-run-all": "^4.1.5"
+  }
+  
+}
